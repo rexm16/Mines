@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How to Use Signal RNG Mines Predictor Bot</title>
+  <style>
+    body {
+      background: #0b0c10;
+      color: #66fcf1;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 40px;
+    }
+    button.learn-btn {
+      background: #45a29e;
+      color: #0b0c10;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 20px 0;
+      transition: background 0.3s;
+    }
+    button.learn-btn:hover {
+      background: #66fcf1;
+    }
+    .instructions {
+      max-width: 480px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #b2ebf2;
+      text-align: left;
+      display: none;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #45a29e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Learn How to Use the Bot</h1>
+  
+  <button class="learn-btn" id="toggleBtn">Show Instructions</button>
+  
+  <div class="instructions" id="instructions">
+    <p>
+      This bot predicts safe spots ("stars") and avoids bombs using secure randomness.
+      <br><br>
+      - Click on the cells to reveal if they are safe or bombs.<br>
+      - Use the "Reveal Signal" button to automatically show all safe spots.<br>
+      - Keep track of your wins and losses with the counters.<br>
+      - Use these insights to strategize and improve your game.
+    </p>
+  </div>
+  
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const instructions = document.getElementById('instructions');
+    
+    toggleBtn.addEventListener('click', () => {
+      if (instructions.style.display === 'none' || instructions.style.display === '') {
+        instructions.style.display = 'block';
+        toggleBtn.textContent = 'Hide Instructions';
+      } else {
+        instructions.style.display = 'none';
+        toggleBtn.textContent = 'Show Instructions';
+      }
+    });
+  </script>
+</body>
+</html>
